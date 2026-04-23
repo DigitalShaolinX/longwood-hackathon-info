@@ -7,12 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --blue: #00521b;
+    --green: #00521b;
+    --green-dark: #003312;
+    --green-mid: #006622;
     --gold: #C8A84B;
     --gold-light: #e8c96e;
     --white: #FFFFFF;
     --off-white: #f5f3ee;
-    --dark: #0a0a1a;
+    --dark: #080f08;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +36,7 @@
     justify-content: center;
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(160deg, #000d2e 0%, #001a5c 50%, #000a1f 100%);
+    background: linear-gradient(160deg, #001a08 0%, #00521b 50%, #000d04 100%);
     overflow: hidden;
   }
 
@@ -44,8 +46,8 @@
     inset: 0;
     background:
       radial-gradient(ellipse 60% 40% at 50% 60%, rgba(200,168,75,0.12) 0%, transparent 70%),
-      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,48,135,0.15) 60px),
-      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,48,135,0.15) 60px);
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,82,27,0.2) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,82,27,0.2) 60px);
   }
 
   .hero-badge {
@@ -163,7 +165,7 @@
   }
 
   /* ── AT A GLANCE ── */
-  .glance { background: #050d20; }
+  .glance { background: #050f06; }
 
   .cards-grid {
     display: grid;
@@ -196,7 +198,7 @@
   }
 
   /* ── SCHEDULE ── */
-  .schedule { background: #020815; }
+  .schedule { background: #020802; }
 
   .timeline {
     margin-top: 50px;
@@ -243,7 +245,7 @@
   }
 
   /* ── TECH & PREP ── */
-  .prep { background: #050d20; }
+  .prep { background: #050f06; }
 
   .prep-grid {
     display: grid;
@@ -286,7 +288,7 @@
   }
 
   .highlight-box {
-    background: linear-gradient(135deg, rgba(0,48,135,0.5), rgba(200,168,75,0.1));
+    background: linear-gradient(135deg, rgba(0,82,27,0.5), rgba(200,168,75,0.1));
     border: 1px solid rgba(200,168,75,0.4);
     border-radius: 8px;
     padding: 22px 26px;
@@ -300,7 +302,7 @@
   }
 
   /* ── LOCATION ── */
-  .location { background: #020815; }
+  .location { background: #020802; }
 
   .loc-inner {
     margin-top: 50px;
@@ -556,7 +558,6 @@
 </footer>
 
 <script>
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -564,7 +565,6 @@
     });
   });
 
-  // Scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.12 });
